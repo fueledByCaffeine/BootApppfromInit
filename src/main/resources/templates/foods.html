@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Foods I Like</title>
+    <link th:href = @{/css/style.css} rel="stylesheet" >
+</head>
+<body>
+<table>
+    <tr>
+        <th>Food Name</th>
+        <th>Food Rating</th>
+    </tr>
+    <tr th:each="foods: ${foods}" >
+        <td th:text= "${foods.foodName}" ></td>
+        <td th:text= "${foods.foodRating}" ></td>
+    </tr>
+</table>
+</body>
+</html>
